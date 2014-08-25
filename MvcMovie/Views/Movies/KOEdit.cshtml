@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "KnockoutJS Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>KOEdit</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Release Date</th>
+            <th>Genre</th>
+            <th>Price</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: Movies">
+        <tr>
+            <td data-bind="text: Title"></td>
+            <td data-bind="text: ReleaseDate"></td>
+            <td data-bind="text: Genre"></td>
+            <td data-bind="text: Price"></td>
+            <td data-bind="text: Rating"></td>
+        </tr>
+    </tbody>
+</table>
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/KOEdit/KOEditPopulate.js")
+}
